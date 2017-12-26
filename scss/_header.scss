@@ -2,7 +2,7 @@ header {
   height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('static/hero-min.jpg');
+  background-image: url(#{$static}/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,16 +19,12 @@ header {
     }
     p {
       margin-top: 0;
-      @include capitalize (1em,
-      .2em);
+      @include capitalize (1em, .2em);
       line-height: 4;
     }
     a {
-      @include button ($accent,
-      1em,
-      .1em);
-      @include transition (background-color,
-      .2s)
+      @include button ($accent, 1em, .1em);
+      @include transition (background-color, .2s)
     }
     a:hover {
       background-color: $primary;

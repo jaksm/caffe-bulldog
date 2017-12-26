@@ -8,8 +8,11 @@
     }
     div {
       flex: 0 1 50%;
-      img {
-        width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media screen and (max-width: $sm-breakpoint) {
+        height: 400px;
       }
     }
     figcaption {
@@ -40,6 +43,21 @@
       @media screen and (max-width: $sm-breakpoint) {
         order: 0;
       }
+    }
+  }
+  figure:nth-child(1) {
+    div {
+      background-image: url(#{$static}/drink1.jpeg);
+    }
+  }
+  figure:nth-child(2) {
+    div {
+      background-image: url(#{$static}/drink2.jpeg);
+    }
+  }
+  figure:nth-child(3) {
+    div {
+      background-image: url(#{$static}/drink-3.jpeg);
     }
   }
 }

@@ -15,16 +15,16 @@
   <aside>
     <ul>
       <li>
-        <a href="#galerija">Galerija</a>
+        <a href="#galerija" class="sidebarLink">Galerija</a>
       </li>
       <li>
-        <a href="#onama">O nama</a>
+        <a href="#onama" class="sidebarLink">O nama</a>
       </li>
       <li>
-        <a href="#pica">Pica</a>
+        <a href="#pica" class="sidebarLink">Pića</a>
       </li>
       <li>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="sidebarLink">Kontakt</a>
       </li>
     </ul>
   </aside>
@@ -38,7 +38,7 @@
         <a href="#onama">O nama</a>
       </li>
       <li>
-        <a href="#pica">Pica</a>
+        <a href="#pica">Pića</a>
       </li>
       <li>
         <a href="#kontakt">Kontakt</a>
@@ -60,7 +60,6 @@
   <section id="pica">
     <figure>
       <div>
-        <img src="static/drink1.jpeg" alt="Drink 1">
       </div>
       <figcaption>
         <h3>Drink one</h3>
@@ -73,7 +72,6 @@
     </figure>
     <figure>
       <div>
-        <img src="static/drink2.jpeg" alt="Drink 2">
       </div>
       <figcaption>
         <h3>Drink two</h3>
@@ -86,7 +84,6 @@
     </figure>
     <figure>
       <div>
-        <img src="static/drink-3.jpeg" alt="Drink 3">
       </div>
       <figcaption>
         <h3>Drink three</h3>
@@ -164,7 +161,7 @@
         <a href="#onama">O nama</a>
       </li>
       <li>
-        <a href="#pica">Pica</a>
+        <a href="#pica">Pića</a>
       </li>
       <li>
         <a href="#kontakt">Kontakt</a>
@@ -182,6 +179,28 @@
       </p>
     </div>
   </footer>
+  <script>
+    var toggle = document.getElementById('nav-icon2')
+    var sidebar = document.getElementsByTagName('aside')[0]
+    var links = document.getElementsByClassName('sidebarLink')
+    var state = false
+
+    toggle.addEventListener('click', toggleMenu)
+
+    for (let i = 0; i < links.length; i++) {
+      links[i].onclick = toggleMenu
+    }
+
+    function toggleMenu() {
+      if (!state) {
+        state = true
+        sidebar.classList.add('active-opacity')
+      } else {
+        state = false
+        sidebar.classList.remove('active-opacity')
+      }
+    }
+  </script>
   <script src="map.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmd-ScDyg7d2L15yD3mN-M_KWyRAqADrs&callback=initMap">
   </script>
