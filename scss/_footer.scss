@@ -1,40 +1,40 @@
 footer {
-    padding: 100px 5em;
-    background-color: $bg-darker;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  padding: 100px 5em;
+  background-color: $bg-darker;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @media screen and (max-width: 520px) {
+    padding: 100px 2.5em;
+  }
+  address {
+    flex: auto;
     @media screen and (max-width: 520px) {
-        padding: 100px 2.5em;
+      flex: 0 1 50%;
     }
-    address {
-        flex: auto;
-        @media screen and (max-width: 520px) {
-            flex: 0 1 50%;
-        }
+  }
+  ul {
+    flex: auto;
+    margin: 0;
+    padding: 0;
+    @media screen and (max-width: 520px) {
+      flex: 0 1 50%;
     }
-    ul {
-        flex: auto;
-        margin: 0;
-        padding: 0;
-        @media screen and (max-width: 520px) {
-            flex: 0 1 50%;
-        }
-        li {
-            line-height: 2;
-            letter-spacing: .1em;
-        }
+    li {
+      line-height: 2;
+      letter-spacing: .1em;
     }
-    div {
-        flex: auto;
-        @media screen and (max-width: 520px) {
-            flex: 0 1 100%;
-            text-align: center;
-            margin-top: 5em;
-            margin-bottom: 1em;
-        }
-        p {
-            margin: 0;
-        }
+  }
+  div {
+    flex: auto;
+    @media screen and (max-width: 520px) {
+      flex: 0 1 100%;
+      text-align: center;
+      margin-top: 5em;
+      margin-bottom: 1em;
     }
+    p {
+      margin: 0;
+    }
+  }
 }

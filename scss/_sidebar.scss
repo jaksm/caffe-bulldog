@@ -1,30 +1,29 @@
 aside {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    display: flex;
-    display: none;
-    align-content: center;
-    background-color: $bg-dark;
-    @include transition (opacity, .2s)
-    ul {
-        margin: auto;
-        text-align: center;
-        li {
-            padding: .5em;
-            a {
-                @include capitalize(1.5em, .2em);
-                @include transition(color, .2s);
-                padding: 1em;
-            }
-            a:hover {
-                color: $accent;
-            }
-        }
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  display: flex;
+  display: none;
+  align-content: center;
+  background-color: $bg-dark;
+  @include transition (opacity, .2s) ul {
+    margin: auto;
+    text-align: center;
+    li {
+      padding: .5em;
+      a {
+        @include capitalize(1.5em, .2em);
+        @include transition(color, .2s);
+        padding: 1em;
+      }
+      a:hover {
+        color: $accent;
+      }
     }
+  }
 }
 
 .active-opacity {
-    opacity: 1;
+  opacity: 1;
 }
