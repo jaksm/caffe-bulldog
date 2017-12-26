@@ -1,0 +1,38 @@
+#nav-icon2 {
+    z-index: 10;
+    display: none;
+    flex: 0 1 50px;
+    height: 50px;
+    position: relative;
+    @media screen and (max-width: $sm-breakpoint) {
+        display: block;
+    }
+}
+
+#nav-icon2 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 50px;
+  background: $primary;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+  top: 0px;
+}
+
+#nav-icon2 span:nth-child(2), #nav-icon2 span:nth-child(4) {
+  top: 15px;
+}
+
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(6) {
+  top: 30px;
+}

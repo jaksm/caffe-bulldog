@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3em 5em;
+    @media screen and (max-width: $sm-breakpoint) {
+        padding: 1em 2.5em;
+        justify-content: space-between;
+    }
+    #logo {
+        flex: 0 1 150px;
+        width: 150px;
+        @media screen and (max-width: $sm-breakpoint) {
+            flex: 0 1 100px;
+            width: 100px;
+        }
+    }
+    ul {
+        flex: 0 1 40%;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $sm-breakpoint) {
+            display: none;
+        }
+        li {
+            flex: auto;
+            a {
+                @include capitalize(90%, .2em);
+                @include transition(color, .2s);
+            }
+            a:hover {
+                color: $accent;
+            }
+        }
+    }
+    @import '_toggle.scss';
+}

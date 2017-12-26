@@ -1,0 +1,45 @@
+#pica {
+    padding: 0;
+    figure {
+        margin: 0;
+        display: flex;
+        @media screen and (max-width: $sm-breakpoint) {
+            display: block;
+        }
+        div {
+            flex: 0 1 50%;
+            img {
+                width: 100%;
+            }
+        }
+        figcaption {
+            flex: 0 1 50%;
+            box-sizing: border-box;
+            padding: 5em;
+            h3 {
+                font-size: 2em;
+            }
+            p {
+                color: $bg-light;
+            }
+            .price {
+                font-size: 1.5em;
+                color: $accent;
+                small {
+                    color: $bg-medium;
+                }
+            }
+        }
+        figcaption:nth-child(odd) {
+            text-align: right;
+        }
+    }
+    figure:nth-child(odd) {
+        div {
+            order: 1;
+            @media screen and (max-width: $sm-breakpoint) {
+                order: 0;
+            }
+        }
+    }
+}

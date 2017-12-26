@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC:700|Oswald&subset=latin-ext');
+
+$heading-font: 'Alegreya SC', serif;
+$paragraph-font: 'Oswald', sans-serif;
+
+@mixin capitalize($font-size, $letter-spacing) {
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+    font-size: $font-size;
+}
+
+@mixin transition($target, $duration) {
+    transition: $target $duration ease-in-out;
+}
+
+@mixin button ($color, $font-size, $letter-spacing) {
+    border: 2px solid $color;
+    color: $color;
+    padding: .5em 2em;
+    box-sizing: border-box;
+    @include capitalize($font-size, $letter-spacing)
+}
+
+
+$bg-darker: #040402;
+$bg-dark: #242621;
+$bg-medium: #59584c;
+$bg-light: #bfb6a4;
+$primary: #f5ecda;
+$accent: #ee1c25;
+
+$sm-breakpoint: 810px;
+
+body {
+    background-color: $bg-darker;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $heading-font;
+    color: $accent;
+}
+
+p, a {
+    font-family: $paragraph-font;
+    color: $primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+section {
+    padding: 100px 5em;
+    box-sizing: border-box;
+    @media screen and (max-width: $sm-breakpoint) {
+        padding: 100px 2.5em;
+    }
+}
+
+.spacer-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.animated {
+    animation-duration: 2s;
+}
+
+address {
+    font-family: $paragraph-font;
+    color: $bg-light;
+}
+
+@import 'scss/_nav.scss';
+@import 'scss/_header.scss';
+@import 'scss/_sidebar.scss';
+@import 'scss/_onama.scss';
+@import 'scss/_pica.scss';
+@import 'scss/_spacerSections.scss';
+@import 'scss/_galerija.scss';
+@import 'scss/_kontakt.scss';
+@import 'scss/_footer.scss';
