@@ -1,11 +1,5 @@
 .social {
-  position: absolute;
-  bottom: 2em;
-  right: 5em;
-  width: 125px;
-  @media screen and (max-width: $sm-breakpoint) {
-    right: 2.5em;
-  }
+  flex: 0 1 100%;
   ul {
     display: flex;
     padding: 0;

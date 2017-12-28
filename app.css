@@ -240,16 +240,9 @@ header div a:hover {
 }
 
 .social {
-  position: absolute;
-  bottom: 2em;
-  right: 5em;
-  width: 125px;
-}
-
-@media screen and (max-width: 810px) {
-  .social {
-    right: 2.5em;
-  }
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
 }
 
 .social ul {
