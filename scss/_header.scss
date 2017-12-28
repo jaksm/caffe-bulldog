@@ -1,5 +1,6 @@
 header {
   height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   background-image: url(#{$static}/hero.jpg);

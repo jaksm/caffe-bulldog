@@ -1,0 +1,23 @@
+.social {
+  position: absolute;
+  bottom: 2em;
+  right: 5em;
+  width: 125px;
+  @media screen and (max-width: $sm-breakpoint) {
+    right: 2.5em;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    li {
+      flex: 1;
+      a {
+        border: none;
+        padding: 2em;
+      }
+      a:hover {
+        background: none;
+      }
+    }
+  }
+}

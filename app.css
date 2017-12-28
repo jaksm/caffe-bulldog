@@ -76,9 +76,11 @@ nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 3em 5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1050px) {
   nav {
     padding: 1em 2.5em;
     -webkit-box-pack: justify;
@@ -94,7 +96,7 @@ nav #logo {
   width: 150px;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1050px) {
   nav #logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100px;
@@ -115,7 +117,7 @@ nav ul {
           align-items: center;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1050px) {
   nav ul {
     display: none;
   }
@@ -149,7 +151,7 @@ nav #nav-icon2 {
   position: relative;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1050px) {
   nav #nav-icon2 {
     display: block;
   }
@@ -185,6 +187,7 @@ nav #nav-icon2 span:nth-child(6) {
 
 header {
   height: 100vh;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,6 +237,41 @@ header div a {
 
 header div a:hover {
   background-color: #f5ecda;
+}
+
+.social {
+  position: absolute;
+  bottom: 2em;
+  right: 5em;
+  width: 125px;
+}
+
+@media screen and (max-width: 810px) {
+  .social {
+    right: 2.5em;
+  }
+}
+
+.social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.social ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.social ul li a {
+  border: none;
+  padding: 2em;
+}
+
+.social ul li a:hover {
+  background: none;
 }
 
 aside {
@@ -385,6 +423,46 @@ aside ul li a:hover {
   background-image: url(../../static/spacer-section-1-min.jpg);
 }
 
+#spacer-second {
+  background-image: url(../../static/spacer-section-2-min.jpg);
+}
+
+#proslave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+@media screen and (max-width: 810px) {
+  #proslave {
+    display: block;
+  }
+}
+
+#proslave div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  background: url(../../static/proslave-min.jpg) no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 810px) {
+  #proslave div {
+    height: 400px;
+  }
+}
+
+#proslave hgroup {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 5em;
+}
+
 #galerija {
   padding: 0;
   display: -webkit-box;
@@ -450,6 +528,7 @@ aside ul li a:hover {
 footer {
   padding: 100px 5em;
   background-color: #040402;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
